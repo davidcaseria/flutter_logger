@@ -3,7 +3,7 @@ use std::{sync::RwLock, time};
 
 #[derive(Clone, Debug, PartialEq)]
 pub struct LogEntry {
-    pub time_millis: i64,
+    pub time_millis: u64,
     pub msg: String,
     pub log_level: log::Level,
     pub lbl: String,
@@ -21,7 +21,7 @@ pub fn log(level: log::Level, label: &str, msg: &str) {
         let start = START.get().unwrap();
         logger.send(LogEntry {
             #[allow(clippy::cast_possible_truncation)]
-            time_millis: start.elapsed().as_millis() as i64,
+            time_millis: start.elapsed().as_millis() as u64,
             msg: String::from(msg),
             log_level: level,
             lbl: String::from(label),

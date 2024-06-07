@@ -184,9 +184,9 @@ dependencies = [
 
 [[package]]
 name = "flutter_rust_bridge"
-version = "2.0.0-dev.27"
+version = "2.0.0-dev.37"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "de520aa4b8fcb8e6cd67492a9de17e29e272daac98be05a97485d531a1d2dceb"
+checksum = "7bc10f01bad9c10018ecd7c998b35d37e6856ffc62b735ef796c617e2006bf00"
 dependencies = [
  "allo-isolate",
  "android_logger",
@@ -211,9 +211,14 @@ dependencies = [
 
 [[package]]
 name = "flutter_rust_bridge_macros"
-version = "2.0.0-dev.27"
+version = "2.0.0-dev.37"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e530c29aaf59c8ff9d3ba588956b4b29d93fcfdee213f422b0e6a76a1e632c6e"
+checksum = "728da530efd18249b5adda2b932a69f92c1d861c18d93dd8b6b9d6df0a2a7d27"
+dependencies = [
+ "hex",
+ "quote",
+ "syn",
+]
 
 [[package]]
 name = "futures"
@@ -315,6 +320,12 @@ name = "hermit-abi"
 version = "0.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "443144c8cdadd93ebf52ddb4056d257f5b52c04d3c804e657d19eb73fc33668b"
+
+[[package]]
+name = "hex"
+version = "0.4.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7f24254aa9a54b5c858eaee2f5bccdb46aaf0e486a595ed5fd8f86ba55232a70"
 
 [[package]]
 name = "js-sys"
@@ -479,9 +490,9 @@ dependencies = [
 
 [[package]]
 name = "syn"
-version = "2.0.25"
+version = "2.0.32"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "15e3fc8c0c74267e2df136e5e5fb656a464158aa57624053375eb9c8c6e25ae2"
+checksum = "239814284fd6f1a4ffe4ca893952cdd93c224b6a1571c9a9eadd670295c0c9e2"
 dependencies = [
  "proc-macro2",
  "quote",
