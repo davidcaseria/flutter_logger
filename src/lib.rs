@@ -94,17 +94,6 @@ macro_rules! flutter_logger_init {
             pub log_level: log::Level,
             pub lbl: String,
         }
-        impl frb_generated::SseEncode for LogEntry {
-            fn sse_encode(
-                self,
-                serializer: &mut flutter_rust_bridge::for_generated::SseSerializer,
-            ) {
-                <u64>::sse_encode(self.time_millis, serializer);
-                <String>::sse_encode(self.msg, serializer);
-                <String>::sse_encode(self.log_level.to_string(), serializer);
-                <String>::sse_encode(self.lbl, serializer);
-            }
-        }
         #[frb(mirror(Level))]
         enum _LogLevel {
             Error,
