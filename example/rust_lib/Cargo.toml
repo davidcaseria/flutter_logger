@@ -7,6 +7,6 @@ edition = "2021"
 crate-type = ["cdylib", "staticlib"]
 
 [dependencies]
-flutter_logger = { path = "../../", features=["panic"]}
-flutter_rust_bridge = "=2.0.0-dev.37"
+flutter_logger = { path = "../../", features = ["panic"] }
+flutter_rust_bridge = "=2.0.0"
 log = "0.4.19"
